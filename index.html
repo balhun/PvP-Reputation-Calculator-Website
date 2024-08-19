@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js"></script>
+    <style>
+        
+    </style>
 </head>
 <body>
-    
+    <div>
+        <div>
+            <div><span>What level are you?</span> <input type="number" id="tfLevel" min="1" max="9999"></div>
+            <div><span></span>How many xp?</span> <input type="range" id="srXpSlider" min="0" max="360" value="0">
+            <div><span>Battles Won</span> <input type="button" value="-" id="BattlesWonMinus" disabled onclick="BattlesWonMinus();"> <span id="BattlesWon">0</span> <input type="button" value="+" id="BattlesWonPlus" disabled onclick="BattlesWonPlus();"></div>
+            <div><span>Grade V</span> <input type="button" value="-" id="GradeVMinus" disabled onclick="GradeVMinus();"> <span id="GradeV">0</span> <input type="button" value="+" id="GradeVPlus" disabled onclick="GradeVPlus();"></div>
+            <div><span>Grade IV</span> <input type="button" value="-" id="GradeIVMinus" disabled onclick="GradeIVMinus();"> <span id="GradeIV">0</span> <input type="button" value="+" id="GradeIVPlus" disabled onclick="GradeIVPlus();"></div>
+            <div><span>Grade III</span> <input type="button" value="-" id="GradeIIIMinus" disabled onclick="GradeIIIMinus();"> <span id="GradeIII">0</span> <input type="button" value="+" id="GradeIIIPlus" disabled onclick="GradeIIIPlus();"></div>
+            <div><span>Grade II</span> <input type="button" value="-" id="GradeIIMinus" disabled onclick="GradeIIMinus();"> <span id="GradeII">0</span> <input type="button" value="+" id="GradeIIPlus" disabled onclick="GradeIIPlus();"></div>
+            <div><span>Grade I</span> <input type="button" value="-" id="GradeIMinus" disabled onclick="GradeIMinus();"> <span id="GradeI">0</span> <input type="button" value="+" id="GradeIPlus" disabled onclick="GradeIPlus();"></div>
+            <div><span>Hourglass Lowered</span> <input type="checkbox" id="cbHourglassLowered" disabled onclick="HourglassLowered();"></div>
+            <div><span>Gold & Glory</span> <input type="checkbox" id="cbGoldAndGlory" disabled onclick="GoldAndGlory();"></div>
+        </div>
+        <div>
+            <img src="" alt="">
+            <canvas></canvas>
+        </div>
+    </div>
 </body>
 </html>
