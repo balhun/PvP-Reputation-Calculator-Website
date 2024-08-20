@@ -6,25 +6,78 @@
     <title>Document</title>
     <script src="script.js"></script>
     <style>
+        @font-face { font-family: Windlass; src: url('Windlass.ttf'); }
+
+        #container {
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px #181818;
+            background-color: #404040;
+        }
+
+        body { 
+            background-color: #282828; 
+            color: rgb(206, 206, 206);
+            font-family: Windlass;
+        }
         
+        div {
+            padding: 0px;
+        }
+
+        #BattlesWon, #GradeV, #GradeIV, #GradeIII, #GradeII, #GradeI {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0px;
+        }
+        #BattlesWonMinus, #GradeVMinus, #GradeIVMinus, #GradeIIIMinus, #GradeIIMinus, #GradeIMinus, #BattlesWonPlus, #GradeVPlus, #GradeIVPlus, #GradeIIIPlus, #GradeIIPlus, #GradeIPlus {
+            width: 30px; height: 30px;
+        }
+
+        #text {
+            padding: 5px;
+            display: block;
+            float: left;
+            width: 250px;
+            margin-right: 10px;
+        }
+        #buttons {
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
-    <div>
-        <div>
-            <div><span>What level are you?</span> <input type="number" id="tfLevel" min="1" max="9999"></div>
-            <div><span></span>How many xp?</span> <input type="range" id="srXpSlider" min="0" max="360" value="0">
-            <div><span>Battles Won</span> <input type="button" value="-" id="BattlesWonMinus" disabled onclick="BattlesWonMinus();"> <span id="BattlesWon">0</span> <input type="button" value="+" id="BattlesWonPlus" disabled onclick="BattlesWonPlus();"></div>
-            <div><span>Grade V</span> <input type="button" value="-" id="GradeVMinus" disabled onclick="GradeVMinus();"> <span id="GradeV">0</span> <input type="button" value="+" id="GradeVPlus" disabled onclick="GradeVPlus();"></div>
-            <div><span>Grade IV</span> <input type="button" value="-" id="GradeIVMinus" disabled onclick="GradeIVMinus();"> <span id="GradeIV">0</span> <input type="button" value="+" id="GradeIVPlus" disabled onclick="GradeIVPlus();"></div>
-            <div><span>Grade III</span> <input type="button" value="-" id="GradeIIIMinus" disabled onclick="GradeIIIMinus();"> <span id="GradeIII">0</span> <input type="button" value="+" id="GradeIIIPlus" disabled onclick="GradeIIIPlus();"></div>
-            <div><span>Grade II</span> <input type="button" value="-" id="GradeIIMinus" disabled onclick="GradeIIMinus();"> <span id="GradeII">0</span> <input type="button" value="+" id="GradeIIPlus" disabled onclick="GradeIIPlus();"></div>
-            <div><span>Grade I</span> <input type="button" value="-" id="GradeIMinus" disabled onclick="GradeIMinus();"> <span id="GradeI">0</span> <input type="button" value="+" id="GradeIPlus" disabled onclick="GradeIPlus();"></div>
-            <div><span>Hourglass Lowered</span> <input type="checkbox" id="cbHourglassLowered" disabled onclick="HourglassLowered();"></div>
-            <div><span>Gold & Glory</span> <input type="checkbox" id="cbGoldAndGlory" disabled onclick="GoldAndGlory();"></div>
+    <div id="container">
+        <div id="input">
+            <div id="text">
+                <span id="whatLevel">What level are you?</span><br>
+                <span id="manyXp">How many xp?</span><br>
+                <span id="spBattlesWon">Battles Won</span><br>
+                <span id="spGradeV">Grade V</span><br>
+                <span id="spGradeIV">Grade IV</span><br>
+                <span id="spGradeIII">Grade III</span><br>
+                <span id="spGradeII">Grade II</span><br>
+                <span id="spGradeI">Grade I</span><br>
+                <span id="HourglassLowered">Hourglass Lowered</span><br>
+                <span id="GoldAndGlory">Gold & Glory</span><br>
+            </div>
+            <div id="buttons"> 
+                <input type="number" id="tfLevel" min="1" max="9999"><br>
+                <input type="range" id="srXpSlider" min="0" max="360" value="0" disabled><br>
+                <input type="button" value="-" id="BattlesWonMinus" disabled onclick="BattlesWonMinus();"> <span id="BattlesWon">0</span> <input type="button" value="+" id="BattlesWonPlus" disabled onclick="BattlesWonPlus();"><br>
+                <input type="button" value="-" id="GradeVMinus" disabled onclick="GradeVMinus();"> <span id="GradeV">0</span> <input type="button" value="+" id="GradeVPlus" disabled onclick="GradeVPlus();"><br>
+                <input type="button" value="-" id="GradeIVMinus" disabled onclick="GradeIVMinus();"> <span id="GradeIV">0</span> <input type="button" value="+" id="GradeIVPlus" disabled onclick="GradeIVPlus();"><br>
+                <input type="button" value="-" id="GradeIIIMinus" disabled onclick="GradeIIIMinus();"> <span id="GradeIII">0</span> <input type="button" value="+" id="GradeIIIPlus" disabled onclick="GradeIIIPlus();"><br>
+                <input type="button" value="-" id="GradeIIMinus" disabled onclick="GradeIIMinus();"> <span id="GradeII">0</span> <input type="button" value="+" id="GradeIIPlus" disabled onclick="GradeIIPlus();"><br>
+                <input type="button" value="-" id="GradeIMinus" disabled onclick="GradeIMinus();"> <span id="GradeI">0</span> <input type="button" value="+" id="GradeIPlus" disabled onclick="GradeIPlus();"><br>
+                <input type="checkbox" id="cbHourglassLowered" disabled onclick="HourglassLowered();"><br>
+                <input type="checkbox" id="cbGoldAndGlory" disabled onclick="GoldAndGlory();"><br>
+            </div>
         </div>
-        <div>
-            <img src="" alt="">
+        <div id="output">
+            <img src="progression-bg-servant.png">
             <canvas></canvas>
         </div>
     </div>
