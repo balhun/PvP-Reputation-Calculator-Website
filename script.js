@@ -33,16 +33,24 @@
     let levelSet = false;
     let xpSet = false;
 
-
     function initialize() {
-        choiceBox.getItems().addAll("Servant", "Guardian");
-        choiceBox.setValue("Servant");
+        //choiceBox.getItems().addAll("Servant", "Guardian");
+        //choiceBox.setValue("Servant");
         //choiceBox.setOnAction(this::getChoice);
-        lbLevel.setFont(Font.loadFont(getClass().getResourceAsStream("Font/Windlass.ttf"), 40));
-        lbXpRequired.setFont(Font.loadFont(getClass().getResourceAsStream("Font/Windlass.ttf"), 15));
-        lbXpRequired.setText(calculateXpRequired() + " xp");
-    }
+        //lbLevel.setFont(Font.loadFont(getClass().getResourceAsStream("Font/Windlass.ttf"), 40));
+        //lbXpRequired.setFont(Font.loadFont(getClass().getResourceAsStream("Font/Windlass.ttf"), 15));
+        //lbXpRequired.setText(calculateXpRequired() + " xp");
 
+        const canvas = document.getElementById("arc");
+        const ctx = canvas.getContext("2d");
+
+        ctx.arc(125, 125, 98, 0, 2 * Math.PI);
+        ctx.lineWidth = 25;
+        ctx.strokeStyle = "#fe7e56";
+        ctx.rotate(90);
+        ctx.stroke();
+    }
+/*
     function getChoice(event) {
         if (choiceBox.getValue().equals("Servant")) ImgProgress.setImage(servant);
         else ImgProgress.setImage(guardian);
@@ -387,4 +395,4 @@
 
         lbXpGain.setText("Xp gained: " + xpGain);
         lbLevelGain.setText("Level gained: " + reverseLvlSearch(xpGain));
-    }
+    }*/

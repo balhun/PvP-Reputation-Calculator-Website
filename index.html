@@ -32,6 +32,7 @@
             width: 30px; height: 30px;
             color: white;
             margin-bottom: 9px;
+            box-shadow: 5px 5px 5px #181818;
         }
 
         #text {
@@ -47,6 +48,7 @@
             padding: 5px;
             display: inline-block;
             text-align: center;
+            
         }
 
         #tfLevel { margin-top: 10px; margin-bottom: 20px; }
@@ -58,12 +60,37 @@
         }
         
         img {
-            display: block;
+            width: 240px; height: 240px;
+        }
+
+        canvas {
+            width: 300px; height: 300px;
+            
+        }
+
+        #output {
             margin: auto;
+            margin-top: 10px;
+            text-align: center;
+            width: 300px;
+            height: 300px;
+        }
+
+        #image {
+            position: absolute;
+            right: 35px;
+            top: 25px;
+            rotate: 90deg;
+        }
+
+        #canvas {
+            position: relative;
+            display: block;
+            rotate: -90deg;
         }
     </style>
 </head>
-<body>
+<body onload="initialize();">
     <div id="container">
         <div id="input">
             <div id="text">
@@ -92,7 +119,10 @@
             </div>
         </div>
         <div id="output">
-            <img src="progression-bg-servant.png">
+            <div id="canvas">
+                <div id="image"><img src="progression-bg-servant.png"></div>
+                <canvas width="250" height="250" id="arc"></canvas>
+            </div>
         </div>
     </div>
 </body>
