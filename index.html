@@ -15,6 +15,7 @@
             border-radius: 10px;
             box-shadow: 10px 10px 5px #181818;
             background-color: #404040;
+            position: relative;
         }
 
         body { 
@@ -69,6 +70,7 @@
         }
 
         #output {
+            position: relative;
             margin: auto;
             margin-top: 10px;
             text-align: center;
@@ -87,6 +89,14 @@
             position: relative;
             display: block;
             rotate: -90deg;
+        }
+        
+        #leveldiv {
+            position: absolute;
+            width: 96%;
+            text-align: center;
+            top: 135px;
+            font-size: 20pt;
         }
     </style>
 </head>
@@ -123,6 +133,7 @@
                 <div id="image"><img src="progression-bg-servant.png"></div>
                 <canvas width="250" height="250" id="arc"></canvas>
             </div>
+            <div id="leveldiv"><span id="level">1.000</span></div>
         </div>
     </div>
 </body>

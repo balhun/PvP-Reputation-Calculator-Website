@@ -41,10 +41,14 @@
         //lbXpRequired.setFont(Font.loadFont(getClass().getResourceAsStream("Font/Windlass.ttf"), 15));
         //lbXpRequired.setText(calculateXpRequired() + " xp");
 
+        drawArc(Math.random()*2);
+    }
+
+    function drawArc(endAngle) {
         const canvas = document.getElementById("arc");
         const ctx = canvas.getContext("2d");
 
-        ctx.arc(125, 125, 98, 0, 2 * Math.PI);
+        ctx.arc(125, 125, 98, 0, endAngle * Math.PI);
         ctx.lineWidth = 25;
         ctx.strokeStyle = "#fe7e56";
         ctx.rotate(90);
